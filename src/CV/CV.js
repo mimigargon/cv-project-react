@@ -6,8 +6,7 @@ export const CV ={
         email: 'mireiag77@gmail.com',
         birthdate: '21/03/1998',
         phone: '600600600',
-        image: '',
-        gitHub: '',
+        gitHub: 'https://github.com/mimigargon',
         aboutMe: [
             {
                 info: ''
