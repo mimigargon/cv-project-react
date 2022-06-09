@@ -6,16 +6,17 @@ export const CV ={
         email: 'mireiag77@gmail.com',
         birthdate: '21/03/1998',
         phone: '600600600',
+        image: 'https://res.cloudinary.com/derinxakc/image/upload/v1654770217/AvatarMaker_fesehn.png',
         gitHub: 'https://github.com/mimigargon',
         aboutMe: [
             {
-                info: ''
+                info: '👩‍💻 Full Stack Developer'
             },
             {
-                info: ''
+                info: '🧛‍♀️ 40% Vampire - 🧙 50% Wizard lvl.24 - 🤖 10% Robot'
             },
             {
-                info: ''
+                info: ' 💪🏻 Challenge seeker and team player'
             }, 
         ],
     },
