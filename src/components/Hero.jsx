@@ -4,7 +4,7 @@ import "./Hero.scss";
 const Hero = ({ hero }) => {
   return (
     <div className="hero">
-      <img src={hero.image} alt="Ilustration of a portrait of myself" />
+      {<img src={hero.image} alt="Ilustration of a portrait of myself" />}
       <div className="card">
         <h2>
           {hero.name} {hero.lastname}

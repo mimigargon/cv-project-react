@@ -4,6 +4,7 @@ const About = ({hero}) => {
   return (
       <div>
           <div className='about card'>
+          <img src={hero.image} alt="Ilustration of a portrait of myself" />
               {hero.aboutMe.map((item) =>{
                   return (
                       <div key={JSON.stringify(item)}>
