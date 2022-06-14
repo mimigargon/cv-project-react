@@ -71,13 +71,12 @@ export const CV ={
             splevel: 'C1', 
         }, 
     ],
-    habilites: [
+    habilities: [
         'HTML',
         'CSS/SASS',
         'JavaScript',
         'Node',
         'React',
-        'SQL',
         'Team work',
         'Communication',
         'Programming', 

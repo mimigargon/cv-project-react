@@ -1,9 +1,10 @@
 import React from "react";
+import './Languages.scss';
 
-const More = ({ languages }) => {
+const Languages = ({ languages }) => {
   return (
     <div>
-      <div className="languages card">
+      <div className="languages-card">
         <img src={languages[0].image} alt="Ilustration of a portrait of myself" />
         {languages.map((item) => {
           return (
@@ -25,4 +26,4 @@ const More = ({ languages }) => {
   );
 };
 
-export default More;
+export default Languages;
