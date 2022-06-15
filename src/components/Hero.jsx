@@ -1,11 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./Hero.scss";
 
-const Hero = ({ hero }) => {
+const Hero = () => {
+  const { hero } = useSelector((state) => state.hero);
+
   return (
-    <div className="hero">
-      {<img src={hero.image} alt="Ilustration of a portrait of myself" />}
-      <div className="card">
+    <div>
+      <div className="hero-card">
+        <img src={hero.image} alt="Ilustration of a portrait of myself" />
+
         <h2>
           {hero.name} {hero.lastname}
         </h2>
@@ -18,6 +23,11 @@ const Hero = ({ hero }) => {
         <p>
           <a href={hero.github}> 💾 GitHub</a>
         </p>
+        <div>
+          <Link to={`/editHero/`}>
+            <button>Edit</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
