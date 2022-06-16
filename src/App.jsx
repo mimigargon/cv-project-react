@@ -6,7 +6,6 @@ import About from "./components/About";
 import Languages from "./components/Languages";
 import Habilities from './components/Habilities';
 import EditHero from "./pages/EditHero";
-import NewHero from "./pages/NewHero";
 import { CV } from "./CV/CV";
 import "./App.scss";
 
@@ -40,8 +39,7 @@ function App() {
 
       <Routes>
         <Route path="/hero" element={<Hero hero={hero} />} />
-        <Route path='/editHero/:id' element={<EditHero/>}/>
-        <Route path='/newHero' element={<NewHero/>}/>
+        <Route path='/editHero' element={<EditHero/>}/>
         <Route path="/about" element={<About hero={hero} />} />
         <Route path="/languages" element={<Languages languages={languages}/>}/>
         <Route path='/habilities' element={<Habilities habilities={habilities} />}/>

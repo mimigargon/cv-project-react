@@ -24,7 +24,7 @@ const Hero = () => {
           <a href={hero.github}> 💾 GitHub</a>
         </p>
         <div>
-          <Link to={`/editHero/:id`}>
+          <Link to={`/editHero`}>
             <button>Edit</button>
           </Link>
         </div>

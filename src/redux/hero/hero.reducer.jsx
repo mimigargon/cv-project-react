@@ -8,11 +8,10 @@ const INITIAL_STATE = {
 };
 
 const heroReducer = (state = INITIAL_STATE, action) => {
-  const { hero } = state;
+  //const { hero } = state;
   switch (action.type) {
     case actions.EDIT_HERO:
-      const { id, editHero } = action.payload;
-      hero[id] = editHero;
+     state.hero = action.payload;
       return state;
     default:
       return state;
