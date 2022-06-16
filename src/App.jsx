@@ -12,6 +12,7 @@ import EditEducation from "./pages/EditEducation";
 import NewEducation from "./pages/NewEducation";
 import { CV } from "./CV/CV";
 import "./App.scss";
+import NewSkills from "./pages/NewSkills";
 
 const { hero, education, experience, languages, skills } = CV;
 
@@ -51,6 +52,7 @@ function App() {
           path="/skills"
           element={<Skills skills={skills} />}
         />
+        <Route path='/newSkills' element={<NewSkills/>}/>
         <Route
           path="/education"
           element={<Education education={education} />}
