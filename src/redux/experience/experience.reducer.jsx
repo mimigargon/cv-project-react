@@ -17,9 +17,14 @@ const experienceReducer = (state = INITIAL_STATE, action) => {
         (exp) => exp !== action.payload
       );
       return { ...state, experience: [...experienceFiltered] };
+    case actions.EDIT_EXPERIENCE:
+      const { id, editExperience } = action.payload;
+      const experienceCopy = [...experience];
+      experienceCopy.splice(id, 1, editExperience);
+      return { ...state, experience: [...experienceCopy] };
     default:
       return state;
   }
 };
 
-export default experienceReducer; 
+export default experienceReducer;

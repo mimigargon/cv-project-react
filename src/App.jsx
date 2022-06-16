@@ -6,6 +6,8 @@ import About from "./components/About";
 import Languages from "./components/Languages";
 import Habilities from './components/Habilities';
 import EditHero from "./pages/EditHero";
+import NewExperience from "./pages/NewExperience";
+import EditExperience from "./pages/EditExperience";
 import { CV } from "./CV/CV";
 import "./App.scss";
 
@@ -45,6 +47,8 @@ function App() {
         <Route path='/habilities' element={<Habilities habilities={habilities} />}/>
         <Route path='/education' element={<Education education={education}/>}/>
         <Route path='/experience' element={<Experience experience={experience}/>}/>
+        <Route path='/newExperience' element={<NewExperience/>}/>
+        <Route path='/editExperience/:id' element={<EditExperience/>}/>
       </Routes>
 
     </div>
