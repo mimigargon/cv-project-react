@@ -5,7 +5,7 @@ import { deleteExperience } from "../redux/experience/experience.actions";
 import "./Experience.scss";
 
 const Experience = () => {
-  const { experience } = useSelector((state) => state.experience);
+  const { experience } = useSelector(state => state.experience);
   const dispatch = useDispatch();
 
   return (
@@ -32,6 +32,7 @@ const Experience = () => {
             </div>
           );
         })}
+        <Link to={`/newExperience`}><button>Add</button></Link>
       </div>
     </div>
   );
