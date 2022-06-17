@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import educationReducer from "./education/education.reducer";
 import experienceReducer from "./experience/experience.reducer";
 import heroReducer from "./hero/hero.reducer";
+import languagesReducer from "./languages/languages.reducer";
 import skillsReducer from "./skills/skills.reducer";
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     experience: experienceReducer,
     education: educationReducer, 
     skills: skillsReducer,
+    languages: languagesReducer,
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

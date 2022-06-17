@@ -55,10 +55,6 @@ export const CV = {
   ],
   languages: [
     {
-      image:
-        "https://res.cloudinary.com/derinxakc/image/upload/v1654770217/AvatarMaker_fesehn.png",
-    },
-    {
       language: "Catalan",
       wrlevel: "Native",
       splevel: "Native",

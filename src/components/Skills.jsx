@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteSkill } from "../redux/skills/skills.actions";
+import { deleteSkillHard } from "../redux/skills/skills.actions";
+import { deleteSkillSoft } from "../redux/skills/skills.actions";
 import { Link } from "react-router-dom";
 import "./Skills.scss";
 
@@ -17,7 +18,7 @@ const Skills = () => {
               <div>
                 <button
                   onClick={() => {
-                    dispatch(deleteSkill(item));
+                    dispatch(deleteSkillHard(item));
                   }}
                 >
                   Delete
@@ -35,7 +36,7 @@ const Skills = () => {
               <div>
                 <button
                   onClick={() => {
-                    dispatch(deleteSkill(item));
+                    dispatch(deleteSkillSoft(item));
                   }}
                 >
                   Delete
@@ -44,8 +45,11 @@ const Skills = () => {
             </div>
           );
         })}
-        <Link to={`/newSkills`}>
-          <button>Add</button>
+        <Link to={`/newSkillsHard`}>
+          <button>Add hard skill</button>
+        </Link>
+        <Link to={`/newSkillsSoft`}>
+          <button>Add soft skill</button>
         </Link>
       </div>
     </div>

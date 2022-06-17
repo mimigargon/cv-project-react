@@ -4,17 +4,23 @@ import * as actions from './skills.actions';
 const {skills} = CV; 
 
 const INITIAL_STATE = {
-    skills: skills, 
+    hard: skills.hard,
+    soft: skills.soft, 
 }; 
 
 const skillsReducer = (state = INITIAL_STATE, action) => {
-    const {skills} = state; 
+    const {hard, soft} = state; 
     switch (action.type) {
-        case actions.ADD_SKILL: 
-        return {...state, skills: [...skills, action.payload]};
-        case actions.DELETE_SKILL:
-            const skillsFiltered = skills.filter((skill) => skill !== action.payload);
-            return {...state, skills: [...skillsFiltered]};
+        case actions.ADD_SKILL_HARD: 
+        return {...state, hard: [...hard, action.payload]};
+        case actions.ADD_SKILL_SOFT:
+            return {...state, soft: [...soft, action.payload]}; 
+        case actions.DELETE_SKILL_HARD:
+            const skillsHardFiltered = hard.filter((hard) => hard !== action.payload);
+            return {...state, hard: [...skillsHardFiltered]};
+            case actions.DELETE_SKILL_SOFT:
+                const skillsSoftFiltered = soft.filter((soft) => soft !== action.payload);
+                return {...state, soft: [...skillsSoftFiltered]};
                 default:
                     return state; 
     }

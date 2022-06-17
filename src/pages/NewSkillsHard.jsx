@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addSkill } from "../redux/skills/skills.actions";
+import { addSkillHard } from "../redux/skills/skills.actions";
+import { addSkillSoft } from "../redux/skills/skills.actions";
 
 const INITIAL_FORM = {
   hard: "",
-  soft: "",
 };
 
-const NewSkills = () => {
+const NewSkillsHard = () => {
   const [form, setForm] = useState(INITIAL_FORM);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    dispatch(addSkill(form));
+    dispatch(addSkillHard(form));
     navigate("/newSkills");
   };
 
@@ -30,13 +30,9 @@ const NewSkills = () => {
         <span>Hard skill</span>
         <input type="text" name="hard" onChange={handleChange} />
       </label>
-      <label>
-        <span>Soft skill</span>
-        <input type="text" name="soft" onChange={handleChange} />
-      </label>
       <button>Add skill</button>
     </form>
   );
 };
 
-export default NewSkills;
+export default NewSkillsHard;

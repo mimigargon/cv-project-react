@@ -1,14 +1,18 @@
 import React from "react";
-import './Languages.scss';
+import { useSelector, useDispatch } from "react-redux";
+import { deleteLanguage } from "../redux/languages/languages.actions";
+import { Link } from "react-router-dom";
+import "./Languages.scss";
 
-const Languages = ({ languages }) => {
+const Languages = () => {
+  const { languages } = useSelector((state) => state.languages);
+  const dispatch = useDispatch();
   return (
     <div>
       <div className="languages-card">
-        <img src={languages[0].image} alt="Ilustration of a portrait of myself" />
-        {languages.map((item) => {
+        {languages.map((item, index) => {
           return (
-            <div key={JSON.stringify(item)}>
+            <div key={index}>
               <p className="name">
                 <strong>Language:</strong> {item.language}
               </p>
@@ -18,9 +22,24 @@ const Languages = ({ languages }) => {
               <p>
                 <strong>Speaking level:</strong> {item.splevel}
               </p>
+              <div>
+                <Link to={`/editLanguage/${index}`}>
+                  <button>Edit</button>
+                </Link>
+                <button
+                  onClick={() => {
+                    dispatch(deleteLanguage(item));
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           );
         })}
+        <Link to={`/newLanguage`}>
+          <button>Add</button>
+        </Link>
       </div>
     </div>
   );
