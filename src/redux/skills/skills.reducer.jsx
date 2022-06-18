@@ -12,11 +12,9 @@ const skillsReducer = (state = INITIAL_STATE, action) => {
   const { hard, soft } = state;
   switch (action.type) {
     case actions.ADD_SKILL_HARD:
-        console.log(state);
-        console.log(action.payload);
-      return { ...state, hard: [...hard, action.payload] };
+      return { ...state, hard: [...hard, action.payload.hard] };
     case actions.ADD_SKILL_SOFT:
-      return { ...state, soft: [...soft, action.payload] };
+      return { ...state, soft: [...soft, action.payload.soft] };
     case actions.DELETE_SKILL_HARD:
       const skillsHardFiltered = hard.filter((hard) => hard !== action.payload);
       return { ...state, hard: [...skillsHardFiltered] };

@@ -4,11 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { addSkillHard } from "../redux/skills/skills.actions";
 
 
-const INITIAL_FORM = [
-   "", 
-
-];
-
+const INITIAL_FORM = {
+  hard: "",
+};
 
 const NewSkillsHard = () => {
   const [form, setForm] = useState(INITIAL_FORM);

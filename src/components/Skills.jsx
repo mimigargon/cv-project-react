@@ -15,7 +15,6 @@ const Skills = () => {
         {hard.map((item, index) => {
           return (
             <div key={index}>
-            {console.log(index)};
               <p>{item}</p>
               <div>
                 <button
