@@ -24,11 +24,11 @@ const Hero = () => {
           <a href={hero.github}> 💾 GitHub</a>
         </p>
         <div>
+        </div>
+      </div>
           <Link to={`/editHero`}>
             <button className="hero-button">Edit</button>
           </Link>
-        </div>
-      </div>
     </div>
   );
 };
