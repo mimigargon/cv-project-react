@@ -38,7 +38,7 @@ const Languages = () => {
           );
         })}
         <Link to={`/newLanguage`}>
-          <button>Add</button>
+          <button>Add language</button>
         </Link>
       </div>
     </div>

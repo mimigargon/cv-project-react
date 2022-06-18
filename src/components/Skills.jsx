@@ -6,14 +6,16 @@ import { Link } from "react-router-dom";
 import "./Skills.scss";
 
 const Skills = () => {
-  const { skills } = useSelector((state) => state.skills);
+  const { hard, soft } = useSelector((state) => state.skills);
   const dispatch = useDispatch();
   return (
     <div>
       <div className="skills-card">
-        {skills.hard.map((item, index) => {
+        <h2>Hard skills</h2>
+        {hard.map((item, index) => {
           return (
             <div key={index}>
+            {console.log(index)};
               <p>{item}</p>
               <div>
                 <button
@@ -29,7 +31,8 @@ const Skills = () => {
         })}
       </div>
       <div className="skills-card">
-        {skills.soft.map((item, index) => {
+        <h2>Soft skills</h2>
+        {soft.map((item, index) => {
           return (
             <div key={index}>
               <p>{item}</p>

@@ -25,7 +25,7 @@ const Hero = () => {
         </p>
         <div>
           <Link to={`/editHero`}>
-            <button>Edit</button>
+            <button className="hero-button">Edit</button>
           </Link>
         </div>
       </div>

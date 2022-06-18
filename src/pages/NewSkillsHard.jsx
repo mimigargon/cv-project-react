@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addSkillHard } from "../redux/skills/skills.actions";
-import { addSkillSoft } from "../redux/skills/skills.actions";
 
-const INITIAL_FORM = {
-  hard: "",
-};
+
+const INITIAL_FORM = [
+   "", 
+
+];
+
 
 const NewSkillsHard = () => {
   const [form, setForm] = useState(INITIAL_FORM);
@@ -16,7 +18,7 @@ const NewSkillsHard = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     dispatch(addSkillHard(form));
-    navigate("/newSkills");
+    navigate("/newSkillsHard");
   };
 
   const handleChange = (ev) => {

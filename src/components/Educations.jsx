@@ -13,10 +13,10 @@ const Education = () => {
         {education.map((item, index) => {
           return (
             <div key={index}>
-              <p className="name">{item.name}</p>
-              <p>{item.where}</p>
-              <p>{item.date}</p>
-              <p>Internship: {item.internship}</p>
+              <p className="name"><strong>What:</strong> {item.name}</p>
+              <p><strong>Where:</strong> {item.where}</p>
+              <p><strong>When:</strong> {item.date}</p>
+              <p><strong>Internship:</strong> {item.internship}</p>
               <div>
                 <Link to={`/editEducation/${index}`}>
                   <button>Edit</button>
