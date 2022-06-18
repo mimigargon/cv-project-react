@@ -8,8 +8,8 @@ const Hero = () => {
 
   return (
     <div>
+        <img className='hero-image' src={hero.image} alt="Ilustration of a portrait of myself" />
       <div className="hero-card">
-        <img src={hero.image} alt="Ilustration of a portrait of myself" />
 
         <h2>
           {hero.name} {hero.lastname}
