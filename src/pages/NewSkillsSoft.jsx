@@ -15,7 +15,7 @@ const INITIAL_FORM = {
     const handleSubmit = (ev) => {
       ev.preventDefault();
       dispatch(addSkillSoft(form));
-      navigate("/newSkillsSoft");
+      navigate("/skills");
     };
   
     const handleChange = (ev) => {

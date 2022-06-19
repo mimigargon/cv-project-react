@@ -17,7 +17,7 @@ const INITIAL_FORM = {
     const handleSubmit = (ev) => {
       ev.preventDefault();
       dispatch(addLanguage(form));
-      navigate("/newLanguage");
+      navigate("/languages");
     };
   
     const handleChange = (ev) => {

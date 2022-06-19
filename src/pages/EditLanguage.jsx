@@ -16,7 +16,7 @@ const EditLanguage = () => {
     const handleSubmit = (ev) => {
       ev.preventDefault();
       dispatch(editLanguage(form, id));
-      navigate("/editLanguage/:id");
+      navigate("/language");
     };
   
     const handleChange = (ev) => {

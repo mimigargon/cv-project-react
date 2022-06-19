@@ -16,7 +16,7 @@ const EditExperience = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     dispatch(editExperience(form, id));
-    navigate("/editExperience/:id");
+    navigate("/experience");
   };
 
   const handleChange = (ev) => {

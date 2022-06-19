@@ -14,7 +14,7 @@ const EditHero = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     dispatch(editHero(form));
-    navigate("/hero");
+    navigate("/");
   };
 
   const handleChange = (ev) => {

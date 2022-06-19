@@ -18,7 +18,7 @@ const NewEducation = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     dispatch(addEducation(form));
-    navigate("/newEducation");
+    navigate("/education");
   };
 
   const handleChange = (ev) => {

@@ -16,7 +16,7 @@ const NewSkillsHard = () => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
     dispatch(addSkillHard(form));
-    navigate("/newSkillsHard");
+    navigate("/skills");
   };
 
   const handleChange = (ev) => {
