@@ -21,13 +21,13 @@ const Hero = () => {
         </p>
         <p>📱 {hero.phone}</p>
         <p>
-          <a href={hero.github}> 💾 GitHub</a>
+          <a href={hero.gitHub}> 💾 GitHub</a>
         </p>
         <div>
         </div>
       </div>
           <Link to={`/editHero`}>
-            <button className="hero-button">Edit</button>
+            <button>Edit</button>
           </Link>
     </div>
   );

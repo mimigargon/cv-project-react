@@ -9,7 +9,7 @@ const Education = () => {
   const dispatch = useDispatch();
   return (
     <div>
-      <div className="education card">
+      <div className="education-card">
         {education.map((item, index) => {
           return (
             <div key={index}>
@@ -19,9 +19,9 @@ const Education = () => {
               <p><strong>Internship:</strong> {item.internship}</p>
               <div>
                 <Link to={`/editEducation/${index}`}>
-                  <button>Edit</button>
+                  <button className='edit-ed-button'>Edit</button>
                 </Link>
-                <button
+                <button className='delete-ed-button'
                   onClick={() => {
                     dispatch(deleteEducation(item));
                   }}
@@ -33,7 +33,7 @@ const Education = () => {
           );
         })}
         <Link to={`/newEducation`}>
-          <button>Add</button>
+          <button className='add-education'>Add education</button>
         </Link>
       </div>
     </div>

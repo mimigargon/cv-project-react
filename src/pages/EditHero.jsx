@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { editHero } from "../redux/hero/hero.actions";
 import { useNavigate } from "react-router-dom";
+import "./EditHero.scss";
 
 const EditHero = () => {
   const { hero } = useSelector((state) => state.hero);
@@ -59,7 +60,7 @@ const EditHero = () => {
           onChange={handleChange}
         />
       </label>
-      <button>Edit information</button>
+      <button className='edit-info-btn'>Edit information</button>
     </form>
   );
 };

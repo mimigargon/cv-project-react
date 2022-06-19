@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addEducation } from "../redux/education/education.actions";
-
+import './NewEducation.scss';
 const INITIAL_FORM = {
   name: "",
   date: "",
@@ -44,7 +44,7 @@ const NewEducation = () => {
         <span>Internship</span>
         <input type="text" name="internship" onChange={handleChange} />
       </label>
-      <button>Add education</button>
+      <button className='add-ed-btn'>Add education</button>
     </form>
   );
 };

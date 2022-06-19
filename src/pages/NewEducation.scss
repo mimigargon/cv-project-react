@@ -1,0 +1,26 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 50px;
+    margin-left: 600px;
+    margin-right: 600px;
+    text-align: center;
+    border: solid 3px rgba(10, 255, 123, 0.7);
+    border-radius: 12px;
+    background-color: rgba(240, 248, 255, 0.241);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-ed-btn {
+    background: none;
+    border: none;
+    color: rgba(10, 255, 123, 0.7);
+    font-size: 25px;
+    border-radius: 12px;
+    border: solid 3px rgba(10, 255, 123, 0.7);
+    margin: 20px 300px 5px 300px;
+    cursor: pointer;
+}

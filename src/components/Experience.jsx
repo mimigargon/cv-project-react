@@ -10,7 +10,7 @@ const Experience = () => {
 
   return (
     <div>
-      <div className="experience card">
+      <div className="experience-card">
         {experience.map((item, index) => {
           return (
             <div key={index}>

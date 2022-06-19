@@ -1,4 +1,44 @@
-.app {
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+$title-font:  'Press Start 2P', cursive;
+$secondary-font: 'Balsamiq Sans', cursive;
+
+html {
   text-align: center;
   background-image: url(./images/black-thread-1920x1080.png);
+ object-fit: fill;
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+    justify-content: space-evenly;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: rgba(10, 255, 123, 0.7);
+    font-size: 25px;
+    border-radius: 12px;
+    border: solid 3px rgba(10, 255, 123, 0.7);
+    margin: 20px 30px 5px 30px;
+    cursor: pointer;
+    font-family: $secondary-font;
+  }
+
+  h2{
+    font-family: $title-font;
+    color: whitesmoke;
+    text-shadow: 2px 2px rgba(10, 255, 123, 0.7);
+    font-size: 25px;
+  }
+
+  p {
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: $secondary-font;
+  }

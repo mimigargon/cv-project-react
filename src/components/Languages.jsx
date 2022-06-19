@@ -13,9 +13,7 @@ const Languages = () => {
         {languages.map((item, index) => {
           return (
             <div key={index}>
-              <p className="name">
-                <strong>Language:</strong> {item.language}
-              </p>
+              <h2>{item.language}</h2>
               <p>
                 <strong>Writing level:</strong> {item.wrlevel}
               </p>
